@@ -1,0 +1,13 @@
+
+<form method="post">
+    <input type="text" value="<?= $oneUser[0]["user_pseudo"] ?>" readonly>
+    <input type="text" value="<?= $oneUser[0]["user_email"] ?>" readonly>
+    <input type="text" value="<?= $oneUser[0]["created_at"] ?>" readonly>
+    <select id="status">
+        <option value="default" selected disabled>Changez de status à cet utilisateur</option>
+        <option value="0">Administrateur</option>
+        <option value="1">Utilisateur</option>
+    </select>
+    <button id="modifier">Effectué la modification</button>
+    <a href="?goto=<?= $this->datacrypt('dashboard') ?>&action=<?= $this->datacrypt('users') ?>">Annuler</a>
+</form>

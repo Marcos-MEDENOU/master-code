@@ -1,0 +1,19 @@
+<div class="msg">
+    <h3>Nom de l'utilisateur : </h3> <p><?= $oneContact[0]["contact_name"] ?></p> 
+    <h3>Email de l'utilisateur : </h3> <p><?= $oneContact[0]["contact_email"] ?></p> 
+    <h3>Sujet : </h3> <p><?= $oneContact[0]["contact_theme"] ?></p> 
+    <h3>Message :</h3> <p><?= $oneContact[0]["contact_body"] ?></p> 
+    <h3>Status : </h3> <p><?= $oneContact[0]["state"] ?></p> 
+    <h3>Reçu: </h3> <p><?= $oneContact[0]["created_at"] ?></p> 
+</div>
+
+<div class="container-msg">
+    <h2>Répondre à ce message</h2>
+    <form method="post">
+        <input type="text" id="mail" value="<?= $oneContact[0]["contact_email"] ?>" readonly>
+        <input type="text" id="subject" placeholder="Objet du message">
+        <textarea id="message" cols="30" rows="10" placeholder="Ecrire le message..."></textarea>
+        <button id="btn-msg">Envoyer le message</button>
+        <a href="?goto=<?= $this->datacrypt('dashboard') ?>&action=<?= $this->datacrypt('message') ?>">Annuler</a>
+    </form>
+</div>

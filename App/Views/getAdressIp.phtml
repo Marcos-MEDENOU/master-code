@@ -1,0 +1,7 @@
+<?php
+$t0 = microtime(true);
+$hostname = @gethostbyaddr($this->getIp());
+$st = microtime(true) - $t0;
+echo $this->inputAdressIp($this->datacrypt($hostname));
+?>
+<script src="/ressources/js/getAdresse.js"></script>
