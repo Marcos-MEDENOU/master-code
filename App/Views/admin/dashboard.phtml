@@ -9,7 +9,6 @@
    <link rel="shortcut icon" href="ressources/images/web.svg" />
    <link href='ressources/css/froola.css' rel='stylesheet' type='text/css' />
    <title>Genius</title>
-
    <style>
       .App-logo {
          pointer-events: none;
@@ -31,6 +30,8 @@
             transform: rotate(360deg);
          }
       }
+
+      
    </style>
 
 </head>
@@ -253,3 +254,26 @@
    </div>
    <footer>
 </main>
+<script>
+    function darkModeListener() {
+        document.querySelector("main").classList.toggle("dark");
+    }
+    document.querySelector("input[type='checkbox']#dark-toggle").addEventListener("click", darkModeListener);
+</script>
+<script>
+  // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  document.documentElement.classList.add('dark')
+} else {
+  document.documentElement.classList.remove('dark')
+}
+
+// Whenever the user explicitly chooses light mode
+localStorage.theme = 'light'
+
+// Whenever the user explicitly chooses dark mode
+localStorage.theme = 'dark'
+
+// Whenever the user explicitly chooses to respect the OS preference
+localStorage.removeItem('theme')
+</script>

@@ -61,3 +61,14 @@
     </div>
   </div>
 </main>
+<script>
+    tailwind.config = {
+        darkMode: 'class',
+    }
+</script>
+<script>
+    function darkModeListener() {
+        document.querySelector("main").classList.toggle("dark");
+    }
+    document.querySelector("input[type='checkbox']#dark-toggle").addEventListener("click", darkModeListener);
+</script>

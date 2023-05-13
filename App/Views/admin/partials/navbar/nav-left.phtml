@@ -10,10 +10,10 @@
 
 <body class="font-poppins antialiased">
   <div class="flex">
-    <div id="view" class="h-full flex flex-row" x-data="{ sidenav: true }">
+    <div id="view" class="h-full flex flex-row " x-data="{ sidenav: true }">
 
       <div id="sidebar"
-        class=" bg-gray-50 h-screen md:block shadow-xl w-30 md:w-60 lg:w-60 overflow-x-hidden transition-transform duration-300 ease-in-out px-0"
+        class=" bg-gray-50 dark:bg-black dark:text-white h-screen md:block shadow-xl w-30 md:w-60 lg:w-60 overflow-x-hidden transition-transform duration-300 ease-in-out px-0"
         x-show="sidenav" @click.away="sidenav = false">
         <div class="space-y-6 md:space-y-10 mt-3 mr-5">
           <div id="profile" class="space-y-3 mt-6">
@@ -40,7 +40,7 @@
                     d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
                   </path>
                 </svg>
-                <span>Dashboard</span>
+                <span class="dark:text-white">Dashboard</span>
               </a>
             <?php else: ?>
               <a href="?goto=<?= $this->datacrypt('home') ?>&action=<?= $this->datacrypt('dash')
@@ -52,7 +52,7 @@
                     d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
                   </path>
                 </svg>
-                <span>Dashboard</span>
+                <span class="dark:text-white">Dashboard</span>
               </a>
             <?php endif; ?>
 
@@ -66,7 +66,7 @@
                     d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z">
                   </path>
                 </svg>
-                <span>Articles</span>
+                <span class="dark:text-white">Articles</span>
               </a>
             <?php else: ?>
               <a href="?goto=<?= $this->datacrypt('dashboard') ?>&action=<?= $this->datacrypt('articles')
@@ -78,7 +78,7 @@
                     d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z">
                   </path>
                 </svg>
-                <span>Articles</span>
+                <span class="dark:text-white">Articles</span>
               </a>
             <?php endif; ?>
 
@@ -93,7 +93,7 @@
                     d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"
                     clip-rule="evenodd"></path>
                 </svg>
-                <span>Etiteur</span>
+                <span class="dark:text-white">Editeur</span>
               </a>
             <?php else: ?>
               <a href="?goto=<?= $this->datacrypt('dashboard') ?>&action=<?= $this->datacrypt('editor')
@@ -106,7 +106,7 @@
                     d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"
                     clip-rule="evenodd"></path>
                 </svg>
-                <span>Etiteur</span>
+                <span class="dark:text-white">Editeur</span>
               </a>
             <?php endif; ?>
 
@@ -121,7 +121,7 @@
                     d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z">
                   </path>
                 </svg>
-                <span>Messages</span>
+                <span class="dark:text-white">Messages</span>
               </a>
             <?php else: ?>
               <a href="?goto=<?= $this->datacrypt('dashboard') ?>&action=<?= $this->datacrypt('message')
@@ -134,7 +134,7 @@
                     d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z">
                   </path>
                 </svg>
-                <span>Messages</span>
+                <span class="dark:text-white">Messages</span>
               </a>
             <?php endif; ?>
 
@@ -148,7 +148,7 @@
                     d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM14 11a1 1 0 011 1v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1v-1a1 1 0 011-1z">
                   </path>
                 </svg>
-                <span>Catégorie</span>
+                <span class="dark:text-gray-500">Catégorie</span>
               </a>
             <?php else: ?>
               <a href="?goto=<?= $this->datacrypt('dashboard') ?>&action=<?= $this->datacrypt('category')
@@ -160,7 +160,7 @@
                     d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM14 11a1 1 0 011 1v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1v-1a1 1 0 011-1z">
                   </path>
                 </svg>
-                <span>Catégorie</span>
+                <span class="dark:text-white">Catégorie</span>
               </a>
             <?php endif; ?>
 
@@ -174,7 +174,7 @@
                     d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z">
                   </path>
                 </svg>
-                <span>Users</span>
+                <span class="dark:text-white">Users</span>
               </a>
             <?php else: ?>
               <a href="?goto=<?= $this->datacrypt('dashboard') ?>&action=<?= $this->datacrypt('users')
@@ -186,7 +186,7 @@
                     d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z">
                   </path>
                 </svg>
-                <span>Users</span>
+                <span class="dark:text-white">Users</span>
               </a>
             <?php endif; ?>
 
@@ -196,7 +196,7 @@
                   <path d="M10 12.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" />
                   <path fill-rule="evenodd" d="M.664 10.59a1.651 1.651 0 010-1.186A10.004 10.004 0 0110 3c4.257 0 7.893 2.66 9.336 6.41.147.381.146.804 0 1.186A10.004 10.004 0 0110 17c-4.257 0-7.893-2.66-9.336-6.41zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
                 </svg>
-                <span>Voir le site</span>
+                <span class="dark:text-white">Voir le site</span>
               </a>
             <a href="?goto=<?= $this->datacrypt('home') ?>&action=<?= $this->datacrypt('logout') ?>"
                 class="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-orange-700 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out">
@@ -206,7 +206,7 @@
                 <path fill-rule="evenodd" d="M6 10a.75.75 0 01.75-.75h9.546l-1.048-.943a.75.75 0 111.004-1.114l2.5 2.25a.75.75 0 010 1.114l-2.5 2.25a.75.75 0 11-1.004-1.114l1.048-.943H6.75A.75.75 0 016 10z" clip-rule="evenodd" />
               </svg>
 
-                <span>Déconnexion</span>
+                <span class="dark:text-white">Déconnexion</span>
               </a>
           </div>
         </div>
@@ -215,5 +215,32 @@
 
   </div>
 
+  <script>
+    tailwind.config = {
+        darkMode: 'class',
+    }
+</script>
+<script>
+    function darkModeListener() {
+        document.querySelector("main").classList.toggle("dark");
+    }
+    document.querySelector("input[type='checkbox']#dark-toggle").addEventListener("click", darkModeListener);
+</script>
+<script>
+  // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  document.documentElement.classList.add('dark')
+} else {
+  document.documentElement.classList.remove('dark')
+}
 
+// Whenever the user explicitly chooses light mode
+localStorage.theme = 'light'
+
+// Whenever the user explicitly chooses dark mode
+localStorage.theme = 'dark'
+
+// Whenever the user explicitly chooses to respect the OS preference
+localStorage.removeItem('theme')
+</script>
 </body>

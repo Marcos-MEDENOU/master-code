@@ -71,6 +71,16 @@
 </div>
 <
   </main>
-
+  <script>
+    tailwind.config = {
+        darkMode: 'class',
+    }
+</script>
+<script>
+    function darkModeListener() {
+        document.querySelector("main").classList.toggle("dark");
+    }
+    document.querySelector("input[type='checkbox']#dark-toggle").addEventListener("click", darkModeListener);
+</script>
   <!-- <script type='text/javascript' src='ressources/js/editor/froola.js'></script> -->
   <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> -->
